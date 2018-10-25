@@ -15,9 +15,7 @@
 		<?php
 			require __DIR__ . '/vendor/autoload.php';
 			$client = new \Github\Client(); 
-			$client->authenticate("sumagnaterra", "mag784326", Github\Client::AUTH_HTTP_PASSWORD);
-			
-			
+
 			$issues = $client->api('issue')->all('sumagnaterra', 'github', array('state' => 'open'));
 
 			for($i=0; $i<=count($issues); $i++){
