@@ -21,7 +21,7 @@
 
 		require __DIR__ . '/vendor/autoload.php';
 		$client = new \Github\Client(); 
-		$client->authenticate("2f904139e8cd80fae15a18935dfb968862dbd118", Github\Client::AUTH_HTTP_TOKEN);
+		$client->authenticate("1d65337ab7c96854c87240ce01bf4493e761bf4b", Github\Client::AUTH_HTTP_TOKEN);
 
 		$issues = $client->api('issue')->create('sumagnaterra', 'github', array('title' => $title, 'body' => $context));
 
